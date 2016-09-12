@@ -1,0 +1,21 @@
+{
+	"name" : "overposted for teamfortress.tv",
+	"version" : "1.0",
+	"manifest_version" : 2,
+	"description" : "Hides threads mentioning overwatch",
+	"browser_action" : {
+		"default_title" : "overposted"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"content_scripts": [
+	  {
+      	"matches": ["*://*.teamfortress.tv/*"],
+    	"js": ["jquery-3.1.0.min.js", "content.js"]
+	  }
+	],
+	"permissions" : ["tabs", "*://*.teamfortress.tv/*"]
+}
