@@ -11,5 +11,5 @@ $('.block.main > a').each(function() {
 	}
 });
 
-stringNuked = numNuked.toString();
+var stringNuked = numNuked.toString();
 chrome.runtime.sendMessage({ type: "setBadge", badgeText : stringNuked });
